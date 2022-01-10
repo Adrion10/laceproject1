@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-transition: .3s;
+    transition: .3s; 
+  } 
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(24, 29, 66);
+  }
+  
+  .container {
+    -webkit-perspective: 800px;
+            perspective: 800px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container:hover {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  .container:hover .side {
+    opacity: 1;
+  }
+  
+  .cube {
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: rotate 10s ease-in-out infinite;
+            animation: rotate 10s ease-in-out infinite;
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+            
+    
+  }
+  
+  .side {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: #333;
+    opacity: .95;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+  }
+  
+  .back {
+    -webkit-transform: translateZ(-150px) rotateX(180deg);
+            transform: translateZ(-150px) rotateX(180deg);
+    background-image: url("../img/Albania6.jpg");
+  }
+  
+  .left {
+    -webkit-transform: translateX(-150px) rotateY(90deg);
+            transform: translateX(-150px) rotateY(90deg);
+    background-image: url("../img/Albania.jpg");
+  }
+  
+  .right {
+    -webkit-transform: translateX(150px) rotateY(90deg);
+            transform: translateX(150px) rotateY(90deg);
+    background-image: url("../img/Albania7.jpg");
+  }
+  
+  .top {
+    -webkit-transform: translateY(-150px) rotateX(90deg);
+            transform: translateY(-150px) rotateX(90deg);
+    background-image: url("../img/Albania2.jpg");
+  }
+  
+  .bottom {
+    -webkit-transform: translateY(150px) rotateX(270deg);
+            transform: translateY(150px) rotateX(270deg);
+    background-image: url("../img/Albania3.jpg");
+  }
+  
+  .front {
+    -webkit-transform: translateZ(150px);
+            transform: translateZ(150px);
+    background-image: url("../img/Albania8.jpg");
+  }
+  
+  @-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    12.5% {
+      -webkit-transform: rotateY(90deg);
+              transform: rotateY(90deg);
+    }
+    25% {
+      -webkit-transform: rotateY(270deg);
+              transform: rotateY(270deg);
+    }
+    37.5% {
+      -webkit-transform: rotateY(270deg);
+              transform: rotateY(270deg);
+    }
+    50% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+    62.5% {
+      -webkit-transform: rotateX(90deg);
+              transform: rotateX(90deg);
+    }
+    75% {
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+    }
+    87.5% {
+      -webkit-transform: rotateX(270deg);
+              transform: rotateX(270deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    12.5% {
+      -webkit-transform: rotateY(90deg);
+              transform: rotateY(90deg);
+    }
+    25% {
+      -webkit-transform: rotateY(270deg);
+              transform: rotateY(270deg);
+    }
+    37.5% {
+      -webkit-transform: rotateY(270deg);
+              transform: rotateY(270deg);
+    }
+    50% {
+      -webkit-transform: rotateY(360deg);
+              transform: rotateY(360deg);
+    }
+    62.5% {
+      -webkit-transform: rotateX(90deg);
+              transform: rotateX(90deg);
+    }
+    75% {
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg);
+    }
+    87.5% {
+      -webkit-transform: rotateX(270deg);
+              transform: rotateX(270deg);
+    }
+    100% {
+      -webkit-transform: rotateX(360deg);
+              transform: rotateX(360deg);
+    }
+  }
